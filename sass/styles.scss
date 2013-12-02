@@ -1,0 +1,74 @@
+@import "compass/reset";
+@import "compass/css3/border-radius";
+@import "compass/css3/box-shadow";
+
+$green: #B5D447;
+$blue: #5493df;
+$blue-hover: darken($blue, 15%);
+$offwhite: #f3f3f3;
+$line: #e3e3e3;
+
+body {
+  background: $green url(../img/background.gif) center;
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+    background-image: url(../img/background-2x.gif);
+    background-size: 200px;
+  }
+  font-family: 'Open Sans', sans-serif;
+  color: #666;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+a {
+  color: #5493df;
+  &:hover {
+    color: $blue-hover;
+  }
+}
+
+p {
+  margin: 1em 0;
+}
+
+#main {
+  background: #fff;
+  border: 8px solid $offwhite;
+  width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  @include border-radius(3px);
+  @include box-shadow(rgba(0, 0, 0, 0.5) 0 0 10px);
+}
+
+.logo {
+  margin: 40px 0 30px;
+}
+
+.body {
+  margin: 0 11.5%;
+}
+
+.callout {
+  background: $blue;
+  @include border-radius(3px);
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: auto;
+  padding: 12px 10px 15px;
+  text-align: center;
+}
+
+.address {
+  margin: 40px 10px 10px;
+  border: 1px solid $line;
+  background: $offwhite;
+  padding: 0.5em;
+  text-align: center;
+  @include border-radius(3px);
+  p {
+    margin: 0.5em;
+  }
+}

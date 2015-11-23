@@ -6,5 +6,4 @@ Icon?
 .Trashes
 
 # compiled less
-*.css
 .sass-cache

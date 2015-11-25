@@ -8,6 +8,17 @@ $blue-hover: darken($blue, 15%);
 $offwhite: #f3f3f3;
 $line: #e3e3e3;
 
+.clearfix {
+  overflow: auto;
+  zoom: 1;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 body {
   background: $green url(../img/background.gif) center;
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
@@ -27,18 +38,56 @@ a {
   }
 }
 
+h2 {
+  color: #b5d447;
+  font-weight: bold;
+  font-size: 1.75em;
+  margin-bottom: 0.5em;
+}
+
 p {
   margin: 1em 0;
 }
 
-#main {
+ul {
+  margin: 1em 0 1em 1em;
+  list-style-type: disc;
+}
+
+li {
+  margin: 0.25em 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+#wrap {
+  width: 960px;
+  padding: 0 20px;
+  margin: 50px auto;
+}
+
+#main, #secondary, #secondary2 {
   background: #fff;
   border: 8px solid $offwhite;
-  width: 400px;
-  margin: 50px auto;
+  width: 440px;
   padding: 20px;
   @include border-radius(3px);
   @include box-shadow(rgba(0, 0, 0, 0.5) 0 0 10px);
+}
+
+#main {
+  float: left;
+}
+
+#secondary, #secondary2 {
+  float: right;
+}
+
+#secondary2 {
+  margin-top: 40px;
 }
 
 .logo {
